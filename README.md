@@ -1761,14 +1761,13 @@ import Header from "../components/admin/Header";
 
 const LayoutAdmin = () => {
   return (
-    <div
-      className="flex bg-neutral-100 h-screen
-    w-screen overflow-hidden"
-    >
+    <div className="flex bg-neutral-100 h-screen">
       <Sidebar />
       <div>
         <Header />
-        <Outlet />
+        <div className="p-2 m-2 border flex-1">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
@@ -1797,12 +1796,12 @@ const LayoutAdmin = () => {
   return (
     <div
       className="flex h-screen
-    w-screen"
+    w-screen overflow-hidden"
     >
       <Sidebar />
       <div className="flex flex-col flex-1">
         <Header />
-        <div className="p-2 m-2 border flex-1 ">
+        <div className="flex-1 p-2 m-2 bg-gray-100 overflow-y-auto">
           <Outlet />
         </div>
       </div>
@@ -1838,10 +1837,10 @@ const Sidebar = () => {
       {/* /Profile */}
 
       {/* Navlink */}
-      <div className="flex-1 py-4">
+      <div className="py-1 mx-2">
         <Link
-          className="flex items-center hover:bg-green-700 hover:duration-200
-          rounded-sm px-3 py-2 gap-2"
+          className="flex hover:bg-green-700 hover:duration-200
+          rounded-sm px-4 py-2 gap-2"
           to={"/admin"}
         >
           <span className="text-xl">
