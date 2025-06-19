@@ -29,8 +29,10 @@ const AppRoutes = () => {
         <Route path="manage" element={<Manage />} />
       </Route>
 
-      <Route path="home" element={<HomeUser />} />
-      <Route path="map" element={<MapUser />} />
+      <Route path="user" element={<Layout />}>
+        <Route index element={<HomeUser />} />
+        <Route path="map" element={<MapUser />} />
+      </Route>
     </Routes>
   );
 };
