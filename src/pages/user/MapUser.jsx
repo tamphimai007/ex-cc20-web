@@ -17,7 +17,7 @@ function MapClickHandler({ onMapClick }) {
   return null;
 }
 
-const MapUser = () => {
+const Home = () => {
   const [value, setValue] = useState({
     title: "",
     lat: "",
@@ -113,4 +113,4 @@ const MapUser = () => {
   );
 };
 
-export default MapUser;
+export default Home;
